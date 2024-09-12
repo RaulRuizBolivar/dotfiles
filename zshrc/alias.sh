@@ -7,6 +7,7 @@
 #          \/             \/     \/
 
 alias n="nvim"
+alias v="nvim"
 alias zrc="nvim ~/.zshrc"
 alias dev="npm run start:dev"
 alias lgit="lazygit"
