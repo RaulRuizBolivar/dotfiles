@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+{{- /*
+  Force executable mode on this script.
+*/ -}}
 # Symlink legacy files into the right place
 # (kitty config and zshrc legacy are outside chezmoi for now)
 
