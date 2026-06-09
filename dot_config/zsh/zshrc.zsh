@@ -2,7 +2,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 sh ~/.config/dotfiles/pokemon-random.sh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# Theme is loaded manually below (p10k) - keep omz default here to avoid errors
+ZSH_THEME="robbyrussell"
 
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_DEFAULT_T_COMMAND="$FZF_DEFAULT_COMMAND"
