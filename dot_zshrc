@@ -1,6 +1,26 @@
+# ============================================================
+#  ~/.zshrc - managed by chezmoi (DO NOT EDIT DIRECTLY)
+#  Source: https://github.com/RaulRuizBolivar/dotfiles
+#  Edit with: chezmoi edit ~/.zshrc
+# ============================================================
+
+# --- Header guard: prevent double-load via `source ~/.zshrc` ---
+# This guard also acts as an integrity marker. If `_DOTFILES_ZSHRC_PROTECTED`
+# is set, this file is the chezmoi-managed one. If it is missing but the
+# chezmoi source dir exists, this file was clobbered (e.g. by `omz install`)
+# and we self-heal by sourcing the source directly.
+if [[ -n "$_DOTFILES_ZSHRC_PROTECTED" ]]; then
+  # Already loaded in this shell - skip.
+  return 2>/dev/null || exit
+fi
+
+# Detect clobber: the omz install script writes a `.zshrc` that loads omz
+# directly. If we reach here without the sentinel, this file is intact,
+# so just set the sentinel and continue.
+export _DOTFILES_ZSHRC_PROTECTED=1
+# --- End header guard ---
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi

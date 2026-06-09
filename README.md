@@ -51,6 +51,28 @@ chezmoi update -v                     # pull + apply
 chezmoi git push                      # sync to GitHub
 ```
 
+## zshrc integrity protection
+
+`dot_zshrc` contains a sentinel (`_DOTFILES_ZSHRC_PROTECTED`) that detects when the
+file is clobbered by external tools (e.g. `omz install` rewrites `~/.zshrc` on first run).
+
+A pre-apply hook in `~/.config/chezmoi/chezmoi.toml` runs `dot_scripts/executable_protect-zshrc.sh`
+on every `chezmoi apply`. If the sentinel is missing, the script re-renders the source
+template and overwrites `~/.zshrc` directly (it does NOT call `chezmoi apply` to avoid a
+recursive loop).
+
+To enable on a new machine, add this to `~/.config/chezmoi/chezmoi.toml`:
+
+```toml
+[hooks]
+  [hooks.apply]
+    [hooks.apply.pre]
+      command = "/home/raul/Projects/dotfiles/dot_scripts/executable_protect-zshrc.sh"
+      args = []
+```
+
+Or run `dot_scripts/install-hooks.sh` from the source dir (one-time).
+
 ## Secrets
 
 The `private_dot_config/opencode/opencode.json.tmpl` template uses `{{ .figma_api_key }}`.
