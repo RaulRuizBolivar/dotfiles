@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.os "darwin" -}}
 #!/usr/bin/env bash
 # Runs once on macOS after chezmoi apply
 # Idempotent - safe to re-run
@@ -20,3 +21,4 @@ if ! command -v brew &>/dev/null; then
 fi
 
 echo "==> Done. Reload your shell: source ~/.zshrc"
+{{- end -}}
