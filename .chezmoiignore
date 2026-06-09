@@ -1,0 +1,10 @@
+# Legacy dirs from pre-chezmoi era, ignored by chezmoi
+# (managed manually via symlinks to ~/.config/dotfiles/)
+kitty
+zshrc
+pokemon-random.sh
+
+# Meta files
+README.md
+.gitignore
+.git

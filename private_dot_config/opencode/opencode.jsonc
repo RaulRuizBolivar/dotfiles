@@ -1,0 +1,8 @@
+# opencode agents and skills config
+# See https://opencode.ai/docs/
+
+[agents]
+default = "build"
+
+[skills]
+path = "~/.config/opencode/skills"
