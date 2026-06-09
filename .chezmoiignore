@@ -2,3 +2,7 @@
 README.md
 .gitignore
 .git
+
+# Repo-only scripts (not deployed to home)
+install.sh
+uninstall.sh

@@ -1,8 +1,0 @@
-# Claude (Anthropic CLI) config
-# https://docs.claude.com/
-
-{
-  "model": "claude-sonnet-4-5",
-  "max_tokens": 8192,
-  "theme": "dark"
-}

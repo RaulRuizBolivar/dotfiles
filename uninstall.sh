@@ -16,8 +16,8 @@ fi
 
 echo "==> Removing managed dotfiles"
 rm -f ~/.zshrc
-rm -rf ~/.zsh
+rm -rf ~/.config/zsh
+rm -rf ~/.config/dotfiles
 rm -rf ~/.config/opencode
-rm -rf ~/.config/claude
 
 echo "==> Done."

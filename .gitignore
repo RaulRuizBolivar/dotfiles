@@ -11,10 +11,3 @@ node_modules/
 *.swo
 .vscode/
 .idea/
-
-# Local secrets (will live in private_dot_zsh/private_local.tmpl)
-# private_dot_zsh/private_local.zsh
-
-# Existing legacy config (managed outside chezmoi for now)
-kitty/instrucciones.md
-zshrc/instrucciones.md
