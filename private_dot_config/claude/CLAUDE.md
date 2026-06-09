@@ -9,4 +9,4 @@
 - Linux: Arch/Omarchy
 - Shell: zsh with oh-my-zsh
 - Editor: nvim
-- Terminal: kitty (linux), Terminal.app/wezterm (mac)
+- Terminal: kitty (linux), wezterm (mac)
