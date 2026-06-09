@@ -30,5 +30,5 @@ if [[ "$TERM_PROGRAM" == "vscode" ]]; then
 fi
 
 # opencode
-export PATH=/Users/raulruizbolivar/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
